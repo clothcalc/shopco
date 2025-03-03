@@ -125,10 +125,57 @@
             </div>
         </div>
     </section>
-    
-    <!-- Footer -->
-    <footer class="bg-black text-white py-8 px-6 text-center">
+
+    <!-- Our Happy Customers -->
+    <section class="py-16 px-6 text-center bg-white relative">
+        <h3 class="text-3xl font-bold mb-6">OUR HAPPY CUSTOMERS</h3>
+        <div class="relative flex items-center">
+            <button id="prevBtn" class="absolute left-0 bg-gray-200 p-2 rounded-full shadow-md">⬅</button>
+            <div id="reviewContainer" class="flex space-x-6 overflow-x-auto scrollbar-hide px-6">
+                <div class="bg-white rounded-lg shadow p-6 min-w-[300px] border">
+                    <div class="flex items-center mb-3">
+                        <span class="text-yellow-500 text-xl">★★★★★</span>
+                    </div>
+                    <p class="text-lg font-bold">Samantha D. <span class="text-green-500">✔</span></p>
+                    <p class="text-gray-600 mt-2">"I absolutely love this t-shirt! The design is unique and the fabric feels so comfortable..."</p>
+                </div>
+                <div class="bg-white rounded-lg shadow p-6 min-w-[300px] border">
+                    <div class="flex items-center mb-3">
+                        <span class="text-yellow-500 text-xl">★★★★★</span>
+                    </div>
+                    <p class="text-lg font-bold">Alex K. <span class="text-green-500">✔</span></p>
+                    <p class="text-gray-600 mt-2">"Finding clothes that align with my personal style used to be a challenge until I discovered Shop.co..."</p>
+                </div>
+                <div class="bg-white rounded-lg shadow p-6 min-w-[300px] border">
+                    <div class="flex items-center mb-3">
+                        <span class="text-yellow-500 text-xl">★★★★★</span>
+                    </div>
+                    <p class="text-lg font-bold">Sarah M. <span class="text-green-500">✔</span></p>
+                    <p class="text-gray-600 mt-2">"I'm blown away by the quality and style of the clothes I received from Shop.co..."</p>
+                </div>
+                <div class="bg-white rounded-lg shadow p-6 min-w-[300px] border">
+                    <div class="flex items-center mb-3">
+                        <span class="text-yellow-500 text-xl">★★★★★</span>
+                    </div>
+                    <p class="text-lg font-bold">Ethan R. <span class="text-green-500">✔</span></p>
+                    <p class="text-gray-600 mt-2">"This t-shirt is a must-have for anyone who appreciates good design..."</p>
+                </div>
+            </div>
+            <button id="nextBtn" class="absolute right-0 bg-gray-200 p-2 rounded-full shadow-md">➡</button>
+        </div>
+    </section>
+     <footer class="bg-black text-white py-8 px-6 text-center">
         <div>Shop.co © 2020-2023. All Rights Reserved</div>
     </footer>
+
+    <script>
+        document.getElementById('prevBtn').addEventListener('click', function() {
+            document.getElementById('reviewContainer').scrollBy({ left: -300, behavior: 'smooth' });
+        });
+
+        document.getElementById('nextBtn').addEventListener('click', function() {
+            document.getElementById('reviewContainer').scrollBy({ left: 300, behavior: 'smooth' });
+        });
+    </script>
 </body>
 </html>
